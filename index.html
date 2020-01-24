@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Rock, Paper, Scissor Game
+        </title>
+        <body>
+            <script>
+                
+                let r = 'rock', p = 'paper', s = 'scissor';
+                
+                function computerPlay( r, p, s ) {
+                    return Math.random( );
+                }
+
+                function playRound( playerSelection, computerSelection ) {
+                    if ( playerSelection == `rock` || computerSelection == `paper`) {
+                        return `You lost! Paper beats rock!`;
+
+                    } else if ( playerSelection == p || computerSelection == r ) {
+                        return `You won! Paper beats rock!`;
+                    } else if ( playerSelection == r || computerSelection == s ) {
+                        return `You won! Rock beats scissor!`;
+                    } else if ( playerSelection == p || computerSelection == s ) {
+                        return `You lost! Scissor beats paper!`;
+                    } else if ( playerSelection == s || computerSelection == p ) {
+                        return `You won! Scissor beats paper!`;
+                    } else if ( playerSelection == s || computerSelection == r ) {
+                        return `You lost! Rock beats scissor!`;
+                    }
+                }
+
+
+                function game( playRound ) {
+                    let userInput = prompt( ' Choose your weapon: rock, paper, scissor ');
+                    computerPlay( `rock`, `paper`, `scissor`);
+                    alert( playRound ( playerSelection, computerPlay ) );
+                }
+
+                game( playRound );
+                game( playRound );
+                game( playRound );
+                game( playRound );
+
+            </script>
+        </body>
+    </head>
+</html>
