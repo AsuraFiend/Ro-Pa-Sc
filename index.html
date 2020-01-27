@@ -7,10 +7,18 @@
         <body>
             <script>
                 
-                let r = 'rock', p = 'paper', s = 'scissor';
+                /*let 0 = 'rock', 1 = 'paper', 2 = 'scissor';*/
                 
-                function computerPlay( r, p, s ) {
-                    return Math.random( );
+                function computerPlay( value ) {
+                   let cpuPlay = Math.floor( Math.random() * Math.floor( value ));
+
+                    if ( cpuPlay == 0 ) {
+                        return cpuPlay = `Rock`;
+                    } else if ( cpuPlay == 1 ) {
+                        return cpuPlay = `Paper`;
+                    } else if ( cpuPlay == 2 ) {
+                        return cpuPlay = `Scissor`;
+                    }
                 }
 
                 function playRound( playerSelection, computerSelection ) {
@@ -33,7 +41,7 @@
 
                 function game( playRound ) {
                     let userInput = prompt( ' Choose your weapon: rock, paper, scissor ');
-                    computerPlay( `rock`, `paper`, `scissor`);
+                    computerPlay( 3 );
                     alert( playRound ( playerSelection, computerPlay ) );
                 }
 
