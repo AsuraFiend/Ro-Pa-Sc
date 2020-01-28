@@ -18,7 +18,7 @@
                         return cpuPlay =`Scissor`;
                     }
                 }
-                
+
                 function playRound( playerSelection, computerSelection ) {
                     if ( playerSelection == `rock` && computerSelection == `Paper`) {
                         return `You lost! Paper beats rock!`;
@@ -43,16 +43,26 @@
                     }
                 }
 
-                function game( playerWeapon, computerWeapon, playRound ) { //need to be fixed
-                    let playerWeapon = prompt( ' Choose your weapon: rock, paper, scissor ').toLowerCase();
-                    let computerWeapon = computerPlay( 3 );
+                function game( playerWeapon, computerWeapon ) { //need to a way to keep track the score
+                    playerWeapon = prompt( ' Choose your weapon: rock, paper, scissor ').toLowerCase();
+                    computerWeapon = computerPlay( 3 );
                 }
                 
-                //playerWeapon and computerWeapon aren't defined
-                 game( playRound( playerWeapon, computerWeapon ) );
-                 game( playRound( playerWeapon, computerWeapon ) );
-                 game( playRound( playerWeapon, computerWeapon ) );
-                 game( playRound( playerWeapon, computerWeapon ) );
+                //bugged line
+                 alert( game( playRound( ) ) );
+                 alert( game( playRound( ) ) );
+                 alert( game( playRound( ) ) );
+                 alert( game( playRound( ) ) );
+                 alert( game( playRound( ) ) );
+
+
+
+                 /*console.log( playRound( game()) );
+                 console.log( playRound( game()) );
+                 console.log( playRound( game()) );
+                 console.log( playRound( game()) );
+                 console.log( playRound( game()) );*/
+
 
             </script>
         </body>
