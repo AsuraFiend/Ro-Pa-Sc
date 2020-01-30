@@ -7,6 +7,9 @@
         <body>
             <script>
                 
+                let playerScores;
+                let compScores;
+
                 function computerPlay( value ) {
                     let cpuPlay = Math.floor( Math.random() * Math.floor( value ));
 
@@ -43,25 +46,17 @@
                     }
                 }
 
-                function game( playerWeapon, computerWeapon ) { //need to a way to keep track the score
-                    playerWeapon = prompt( ' Choose your weapon: rock, paper, scissor ').toLowerCase();
-                    computerWeapon = computerPlay( 3 );
+                function game( userChoice, compChoice ) { //need to a way to keep track the score 
+                    userChoice = prompt( ' Choose your weapon: rock, paper, scissor ').toLowerCase();
+                    compChoice = computerPlay( 3 );
+                    alert( playRound( userChoice, compChoice ) );
                 }
                 
-                //bugged line
-                 alert( game( playRound( ) ) );
-                 alert( game( playRound( ) ) );
-                 alert( game( playRound( ) ) );
-                 alert( game( playRound( ) ) );
-                 alert( game( playRound( ) ) );
-
-
-
-                 /*console.log( playRound( game()) );
-                 console.log( playRound( game()) );
-                 console.log( playRound( game()) );
-                 console.log( playRound( game()) );
-                 console.log( playRound( game()) );*/
+                console.log( game() );
+                console.log( game() );
+                console.log( game() );
+                console.log( game() );
+                console.log( game() );
 
 
             </script>
