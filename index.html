@@ -7,8 +7,11 @@
         <body>
             <script>
                 
-                let playerScores;
-                let compScores;
+                let playerScores = 0;
+                let compScores = 0;
+
+                alert( `Welcome to rock-paper-scissor minigame!`);
+
 
                 function computerPlay( value ) {
                     let cpuPlay = Math.floor( Math.random() * Math.floor( value ));
@@ -48,11 +51,12 @@
                     } else if ( playerSelection == `scissor` && computerSelection == `Scissor` ){
                         return `It's a draw! Scissor equals scissor`;
                     } else {
-                        return `Invalid command, please try again.`;
+                        return `Invalid command.`;
+
                     }
                 }
 
-                function game( userChoice, compChoice ) { //need to a way to keep track the score 
+                function game( userChoice, compChoice ) { 
                     userChoice = prompt( ' Choose your weapon: rock, paper, scissor ').toLowerCase();
                     compChoice = computerPlay( 3 );
                     alert( playRound( userChoice, compChoice ) );
@@ -63,6 +67,17 @@
                 console.log( game() );
                 console.log( game() );
                 console.log( game() );
+
+                if ( playerScores > compScores ) {
+                    alert( ` Your scores: ${playerScores}, Computer scores: ${compScores}.`)
+                    alert( ` Congratulations! You won against the computer! `);
+                } else if ( playerScores < compScores )  {
+                    alert( ` Your scores: ${playerScores}, Computer scores: ${compScores}.`)
+                    alert( ` Oh no! You have lost against the computer! `);
+                } else {
+                    alert( ` Your scores: ${playerScores}, Computer scores: ${compScores}.`)
+                    alert( `It's a draw battle! No one won or lost!`);
+                }
 
 
             </script>
