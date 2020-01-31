@@ -24,16 +24,22 @@
 
                 function playRound( playerSelection, computerSelection ) {
                     if ( playerSelection == `rock` && computerSelection == `Paper`) {
-                        return `You lost! Paper beats rock!`;
+                        compScores++;
+                        return `You lost! Paper beats rock!`
                     } else if ( playerSelection == `paper` && computerSelection == `Rock` ) {
+                        playerScores++;
                         return `You won! Paper beats rock!`;
                     } else if ( playerSelection == `rock` && computerSelection == `Scissor` ) {
+                        playerScores++;
                         return `You won! Rock beats scissor!`;
                     } else if ( playerSelection == `paper` && computerSelection == `Scissor` ) {
+                        compScores++;
                         return `You lost! Scissor beats paper!`;
                     } else if ( playerSelection == `scissor` && computerSelection == `Paper` ) {
+                        playerScores++;
                         return `You won! Scissor beats paper!`;
                     } else if ( playerSelection == `scissor` && computerSelection == `Rock` ) {
+                        compScores++;
                         return `You lost! Rock beats scissor!`;
                     } else if ( playerSelection == `rock` && computerSelection == `Rock` ) {
                         return `It's a draw! Rock equals rock!`;
