@@ -4,4 +4,4 @@ They are  variables, variable scopes, boolean logic, conditional statements, how
 
 To check the live version :
 
-https://asura-tech.github.io/Ro-Pa-Sc/
+https://asurafiend.github.io/Ro-Pa-Sc/
